@@ -74,7 +74,9 @@ And Emmet does fulfill what they promise, you can use short expressions to gener
 
 - async and defer both load JavaScript asynchronously without render blocking, but async executes as soon as possible and in no particular order while defer runs in sequence toward the end of the loading process, just before the DOMContentLoaded event.
 
-# What is async and defer?
+
+
+# lecture2
 
 ## What is `NPM`?
 
@@ -88,8 +90,49 @@ And Emmet does fulfill what they promise, you can use short expressions to gener
 
 - it stores the informations about the projects when parcel builds it . so that it rebuilds , does not have re-parse and re-analyize from scratch . it is a key reson , why parcel can be so fast in development.
 
-# lecture2
+## What is `npx` ?
+ - What is NPX? NPX stands for Node Package eXecute. It is simply an NPM package runner. It allows developers to execute any Javascript Package available on the NPM registry without even installing it. NPX is installed automatically with NPM version 5.2.
 
+## What is difference between `dependencies` vs `devDependencies`?
+ - A dependency is a library that a project needs to function effectively. DevDependencies are the packages a developer needs during development.
+- The 'npm install' command should add all the dependencies and devDependencies automatically during installation. If you need to add specific devDependencies to your project, you can use this command- 'npm install --save-dev'.
+
+##  What is Tree Shaking?
+ - Tree shaking is a term commonly used within a JavaScript context to describe the removal of dead code.
+
+- It relies on the import and export statements to detect if code modules are exported and imported for use between JavaScript files.
+
+- In modern JavaScript applications, we use module bundlers (e.g., webpack or Rollup) to automatically remove dead code when bundling multiple JavaScript files into single files. This is important for preparing code that is production ready, for example with clean structures and minimal file size.
+
+## What is Hot Module Replacement?
+ - Hot Module Replacement (HMR) exchanges, adds, or removes modules while an application is running, without a full reload. This can significantly speed up development in a few ways: Retain application state which is lost during a full reload. Save valuable development time by only updating what's changed.
+
+## List down your favourite 5 superpowers of Parcel and describe any 3 of them in your own words?
+ - HMR (Hot Module Replacement) parcel keeps track of file changes via file watcher algorithm and renders the changes in the files
+ - File watcher algorithm - made with C++ Minification
+ - Cleaning our code
+
+## What is `.gitignore`? What should we add and not add into it?
+ - A gitignore file specifies intentionally untracked files that Git should ignore. Files already tracked by Git are not affected. 
+## - What is the difference between `package.json` and `package-lock.json`
+  ### The Role of package.json:
+   1. Project Configuration
+   2. Dependency Management
+   3. Version Management
+
+  ### The Role of package-lock.json
+   1. Dependency Locking
+   2. Version Consistency
+   3. Improved Installation Speed
+
+   ## difference between role of package.json and package-lock.json 
+
+| **Aspect** | **package.json** | **package-lock.json** |
+|------------|------------------|-----------------------|
+| **Purpose** | Contains basic information about the project. | Describes the exact tree that was generated to allow subsequent installs to have the identical tree. |
+| **Necessity** | Mandatory for every project. | Automatically generated for operations where npm modifies either node_modules tree or package.json. |
+| **Metadata** | Records important metadata about the project. | Allows future developers to install the same dependencies in the project. |
+| **Contents** | Contains information such as name, description, author, script, and dependencies. | Contains the name, dependencies, and locked versions of the project. |  
 ## dependencies
 
 there are two type of dependency
@@ -139,3 +182,4 @@ features of parcel:=
   - if you give attribute in inside the jsx then it should be in camel case like =tabIndex
 
 # lecture 4 -Talk Cheafp, Show Me the Code  -remainig to watch Remaining Time-1:08:37
+ - config driven ui

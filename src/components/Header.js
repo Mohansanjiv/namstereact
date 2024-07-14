@@ -5,17 +5,16 @@ import { Link } from "react-router-dom"
 
 
 const Header =()=>{
-
     return(
      <div className="header">
        <div>
-          <img src={logo} className="logo" />
+          <Link to="/"><img src={logo} className="logo" /></Link>
        </div>
          <ul className="nav-list">
             <li><Link to="/">Home</Link></li>
             <li><Link to="/about">About Us</Link></li>
             <li><Link to="/contact">Contact Us</Link></li>
-            <li><Link >Cart</Link></li>
+            <li><Link> Cart </Link></li>
             <li><Link to="/login">Login</Link></li>
          </ul>
      </div>
