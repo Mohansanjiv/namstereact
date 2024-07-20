@@ -1,6 +1,6 @@
 import React from "react"
 import './Header.css'
-import logo from "./logo.png"
+import { LOGO_URL } from "../utils/constant"
 import { Link } from "react-router-dom"
 
 
@@ -8,7 +8,7 @@ const Header =()=>{
     return(
      <div className="header">
        <div>
-          <Link to="/"><img src={logo} className="logo" /></Link>
+          <Link to="/"><img src={LOGO_URL} className="logo" /></Link>
        </div>
          <ul className="nav-list">
             <li><Link to="/">Home</Link></li>
