@@ -3,7 +3,7 @@ import './ResturantCard.css'
 import { CDN_URL } from '../utils/constant'
 
 const ResturantCard = props => {
-  const data = props.data.info
+  const data = props.data.info;
 
   return (
     <div className='card-container'>
@@ -12,6 +12,7 @@ const ResturantCard = props => {
       </div>
       <div className='card-content'>
         <div className='title'>{data.name}</div>
+        <div className='cusine'>{data.cuisines.join(',')}</div>
         <div className='delivery-time'>
           <span>{data.costForTwo}</span>
           <br />
@@ -20,7 +21,7 @@ const ResturantCard = props => {
 
           <span>{data.sla.deliveryTime} mintues</span>
         </div>
-        <div className='cusine'>{data.cuisines}</div>
+        
       </div>
     </div>
   )
