@@ -525,3 +525,11 @@ Example of a Config-Driven UI
     }
   ]
 }
+
+Routing:-
+ there are tow type routing 
+  -client side routing
+  -server side routing
+
+  -in react , client routing refers to interchanging the components in a single page.ddd
+  

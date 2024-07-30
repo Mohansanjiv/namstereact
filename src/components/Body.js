@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import ResturantCard from './ResturantCard';
 import './Body.css';
 import ShimmerUi from './ShimmerUi'
+import { Link } from 'react-router-dom';
 
 const Body = () => {
   const [listCard, setListCard] = useState([])
@@ -20,8 +21,8 @@ const Body = () => {
       const resData =
         jsonData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
           ?.restaurants
-      setListCard(resData)
-      setFilteredResturant(resData)
+      setListCard(resData);
+      setFilteredResturant(resData);
       console.log(resData)
     } catch (error) {
       console.error('Error fetching data:', error)
@@ -65,7 +66,10 @@ const Body = () => {
 
           <div className='bodyDisplayContent'>
             {filteredResturant.map(resCards => {
-              return <ResturantCard key={resCards.info.id} data={resCards} />
+              return (
+               
+                   <ResturantCard key={resCards.info.id} data={resCards} />
+              )
             })}
           </div>
         </div>
